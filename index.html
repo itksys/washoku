@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>和食や高はし</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Maps API：APIキーは有効なものを使用してください -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw3JkpP0zslkhlXkWMhmPdyPZWMiRpfSA&callback=initMap"
+        async defer></script>
+
+    <style>
+        /* map用の最低限のスタイル */
+        #map {
+            width: 100%;
+            height: 300px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!--ヘッダー-->
+            <hgroup>
+                <div class="image-wrapper">
+                    <img src="img/top.jpg" alt="TOP画像" class="background-image">
+                    <img src="img/top-rogo.png" alt="ロゴ" class="overlay-image">
+                </div>
+            </hgroup>
+        </header>
+
+        <main>
+
+            <section>
+                <h2 style="display: none;">紹介</h2>
+                <div class="s-content">
+                    <!--メインー-->
+                    <div class="introduce">
+                        <p>旭川駅から車で15分の距離にある和食や高はし。<br />バス通りに面している小さなお店です。家庭料理を中心とした居酒屋メニューを提供しています。
+
+
+                            <br />以前は中心部パリ街で「和食高はし」として和食を基本に創作料理を提供。<br />店主の想像力が衰えを感じ始め閉店しましたが、<br />
+                            修行で新たな創造性を身につけ旭川の地で出店。<br />旬の素材を創作性でひと手間ふた手間かけた料理は逸品。<br />本格的な和食ながらお手頃の価格でお楽しみいただけます。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <div class="menu-container">
+                    <!-- 右側：お品書きタイトル -->
+                    <h2 class="menu-title">― お品書き ―</h2>
+                    <!-- 左側：メニュー画像群 -->
+                    <div class="menu-images">
+
+                        <div class="menu-item">
+                            <img src="img/menu-sasimi.jpg" alt="刺身">
+                            <a href="menu.html#sasimi" class="menu-label">刺身</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-tokachigyu.png" alt="十勝牛">
+                            <a href="menu.html#tokachigyu" class="menu-label">十勝牛</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-agemono.jpg" alt="揚物">
+                            <a href="menu.html#agemono" class="menu-label">揚げ物</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-yakimono.jpg" alt="焼物">
+                            <a href="menu.html#yakimono" class="menu-label">焼物</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-kusimono.png" alt="串物">
+                            <a href="menu.html#kushimono" class="menu-label">串物</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-nimono.jpg" alt="煮物">
+                            <a href="menu.html#simmered" class="menu-label">煮物</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-sakezakana.jpg" alt="酢の物">
+                            <a href="menu.html#vinegared" class="menu-label">酢の物</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-gohann.png" alt="ご飯もの">
+                            <a href="menu.html#rice" class="menu-label">ご飯もの</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-sarada.png" alt="サラダ">
+                            <a href="menu.html#salad" class="menu-label">サラダ</a>
+                        </div>
+
+                        <div class="menu-item">
+                            <img src="img/menu-sakezakana.jpg" alt="酒肴">
+                            <a href="menu.html#appetizers" class="menu-label">酒肴</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="content-wrapper">
+
+                <div class="information-img">
+                    <img src="img/information-gaikan.jpg">
+                    <img src="img/information-shop1.jpg">
+                    <img src="img/information-shop2.jpg">
+                    <img src="img/information-noren.jpg">
+
+                </div>
+                <div class="information-wrapper">
+                    <div class="information">
+                        <h2>店舗情報</h2>
+                        <h3>■ 所在地</h3>
+                        <p>北海道旭川市緑町19丁目2148</p>
+                        <p>旭川西イオンから徒歩10分程度</p>
+                        <p>高速道路 道央自動車道「旭川鷹栖IC」から1.2km</p>
+
+                        <h3>■ 電話番号</h3>
+                        <p>0166-73-7895</p>
+
+                        <h3>■ 営業時間</h3>
+                        <p>17：00～23：00</p>
+
+                        <h3>■ 定休日</h3>
+                        <p>毎週水曜日</p>
+                        <p>その他facebookにてお知らせ</p>
+
+                        <h3>■ 駐車場</h3>
+                        <p>有6台</p>
+
+                        <h3>■ 座席</h3>
+                        <p>20席(カウンター8席、小上がり4人掛け3卓)</p>
+
+                        <h3>■ アクセス</h3>
+                        <p>函館本線「近文駅」から徒歩7分</p>
+                        <p>バス：鷹栖線 旭町2条18丁目バス停 から徒歩12分</p>
+
+                        <section>
+                            <div id="map"></div>
+                        </section>
+                    </div>
+
+                    <div class="reserve">
+                        <h2>予約</h2>
+                        <P>お電話、またはLINEにて承っております。</P>
+                        <p>TEL：0166-52-8824</p>
+                        <P>店長(高橋)：090-8274-9892</P>
+                        <div class="qrcode">
+                            <a href="#" target="_blank" rel="noopener">
+                                <img src="img/qr.png" alt="LINEのQRコード">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+
+    <footer>
+        <!--フッター-->
+        <div class="logo">
+            <img src="img/footer-logo.png" alt="和食や高橋ロゴ">
+        </div>
+
+        <div class="SNS">
+            <a href="#" target="_blank" rel="noopener">
+                <img src="img/sns-fb.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" rel="noopener">
+                <img src="img/sns-ig.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    
+  <script>
+    function initMap() {
+      const location = { lat: 43.790881326438495, lng: 142.3299431221548 };
+
+    
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: location
+      });
+
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "和食や高はし"
+      });
+    }
+  </script>
+</body>
+
+</html>
