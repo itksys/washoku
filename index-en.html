@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Washokuya Takahashi</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=MAPS_API_KEY_PLACEHOLDER&callback=initMap"
+    async defer></script>
+
+  <style>
+    /* Map basic style */
+    #map {
+      width: 100%;
+      height: 300px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <hgroup>
+        <div class="image-wrapper">
+          <img src="img/top.jpg" alt="Top image" class="background-image">
+          <img src="img/top-rogo.png" alt="Logo" class="overlay-image">
+        </div>
+      </hgroup>
+    </header>
+
+    <main>
+
+      <section>
+        <h2 style="display: none;">Introduction</h2>
+        <div class="s-content">
+          <div class="introduce">
+            <p>
+              Washokuya Takahashi is located about 15 minutes by car from Asahikawa Station, along a main bus street.
+              This small restaurant offers a variety of Japanese-style dishes centered on homemade cuisine.<br /><br />
+
+              Previously located in the downtown "Paris Street" area as “Washoku Takahashi,” the owner served creative
+              Japanese cuisine. After closing that chapter, he trained further to refine his skills and opened this new
+              restaurant in Asahikawa.<br /><br />
+
+              Using seasonal ingredients and an imaginative approach, each dish is carefully crafted to highlight both
+              flavor and artistry. Guests can enjoy authentic Japanese cuisine at an affordable price.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section">
+        <div class="menu-container">
+          <h2 class="menu-title">― Menu ―</h2>
+
+          <div class="menu-images">
+
+            <div class="menu-item">
+              <img src="img/menu-sasimi.jpg" alt="Sashimi">
+              <a href="menu-en.html#sasimi" class="menu-label">Sashimi</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-tokachigyu.png" alt="Tokachi Beef">
+              <a href="menu-en.html#tokachigyu" class="menu-label">Tokachi Beef</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-agemono.jpg" alt="Fried Dishes">
+              <a href="menu-en.html#agemono" class="menu-label">Fried Dishes</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-yakimono.jpg" alt="Grilled Dishes">
+              <a href="menu-en.html#yakimono" class="menu-label">Grilled Dishes</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-kusimono.png" alt="Skewers">
+              <a href="menu-en.html#kushimono" class="menu-label">Skewers</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-nimono.jpg" alt="Simmered Dishes">
+              <a href="menu-en.html#simmered" class="menu-label">Simmered</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-sakezakana.jpg" alt="Vinegared Dishes">
+              <a href="menu-en.html#vinegared" class="menu-label">Vinegared</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-gohann.png" alt="Rice Dishes">
+              <a href="menu-en.html#rice" class="menu-label">Rice Dishes</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-sarada.png" alt="Salad">
+              <a href="menu-en.html#salad" class="menu-label">Salad</a>
+            </div>
+
+            <div class="menu-item">
+              <img src="img/menu-sakezakana.jpg" alt="Appetizers">
+              <a href="menu-en.html#appetizers" class="menu-label">Appetizers</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="content-wrapper">
+
+        <div class="information-img">
+          <img src="img/information-gaikan.jpg" alt="Exterior">
+          <img src="img/information-shop1.jpg" alt="Interior 1">
+          <img src="img/information-shop2.jpg" alt="Interior 2">
+          <img src="img/information-noren.jpg" alt="Entrance Curtain">
+        </div>
+
+        <div class="information-wrapper">
+          <div class="information">
+            <h2>Shop Information</h2>
+
+            <h3>■ Address</h3>
+            <p>2148-19 Midorimachi, Asahikawa, Hokkaido</p>
+            <p>About 10 minutes on foot from Aeon Asahikawa Nishi</p>
+            <p>1.2 km from Asahikawa-Takasu IC on the Dōō Expressway</p>
+
+            <h3>■ Phone</h3>
+            <p>0166-73-7895</p>
+
+            <h3>■ Business Hours</h3>
+            <p>17:00 – 23:00</p>
+
+            <h3>■ Closed</h3>
+            <p>Every Wednesday</p>
+            <p>Additional holidays announced on Facebook</p>
+
+            <h3>■ Parking</h3>
+            <p>6 spaces available</p>
+
+            <h3>■ Seating</h3>
+            <p>20 seats (8 counter, 3 tables for 4)</p>
+
+            <h3>■ Access</h3>
+            <p>7-minute walk from JR Chikabumi Station</p>
+            <p>12-minute walk from Asahimachi </p>
+                <p>2-jo 18-chome Bus Stop (Takasu Line)</p>
+
+            <section>
+              <div id="map"></div>
+            </section>
+          </div>
+
+          <div class="reserve">
+            <h2>Reservation</h2>
+            <p>Please contact us by phone or LINE.</p>
+            <p>TEL: 0166-52-8824</p>
+            <p>Manager (Takahashi): 090-8274-9892</p>
+            <div class="qrcode">
+              <a href="#" target="_blank" rel="noopener">
+                <img src="img/qr.png" alt="LINE QR code">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Language switch button -->
+  <a href="index.html" class="lang-button-top">日本語</a>
+  </main>
+
+  <footer>
+    <div class="logo">
+      <img src="img/footer-logo.png" alt="Washokuya Takahashi logo">
+    </div>
+
+    <div class="SNS">
+      <a href="#" target="_blank" rel="noopener">
+        <img src="img/sns-fb.png" alt="Facebook">
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        <img src="img/sns-ig.png" alt="Instagram">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function initMap() {
+      const location = { lat: 43.790881326438495, lng: 142.3299431221548 };
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: location
+      });
+
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Washokuya Takahashi"
+      });
+    }
+  </script>
+</body>
+
+</html>
