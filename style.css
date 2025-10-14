@@ -1,33 +1,42 @@
 /* ===================================================
-   ページ全体のリセット・共通設定
+   ページ全体のリセット・共通設定（白帯対策込み）
 =================================================== */
-/* 背景固定レイヤー */
-body::before {
-    content: "";
-    position: fixed;
-    /* 画面に固定 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("img/background-washi.jpg");
-    background-size: cover;
-    /* 常に画面いっぱいに表示 */
-    background-position: center;
-    /* 中央に配置 */
-    background-repeat: no-repeat;
-    /* 繰り返さない */
-    z-index: -1;
-    /* コンテンツの下に配置 */
-}
-
-/* body本体には背景を指定しない */
 html,
 body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
     font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
     color: #060606;
+    background-image: url("img/background-washi.jpg");
+    position: relative;
+}
+
+/* 背景固定レイヤー（vh→dvhでモバイル対応） */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    background-image: url("img/background-washi.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@supports (height: 100svh) {
+    body::before {
+        height: 100svh;
+    }
+}
+
+/* セーフエリア対応 */
+@media screen and (max-width: 600px) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
 }
 
 footer {
@@ -159,19 +168,18 @@ header {
 
 @media screen and (max-width: 600px) {
 
-    .introduce p
-    {
-    margin: 40px 15px 10px 15px;
-    font-size: 1em;
-    text-align: left;
-}
+    .introduce p {
+        margin: 40px 15px 10px 15px;
+        font-size: 1em;
+        text-align: left;
+    }
 }
 
 /* ===================================================
    メニューセクション
 =================================================== */
 .menu-section {
-    max-width: 1200pX;
+    max-width: 1200px;
     margin: 60px auto;
 }
 
@@ -189,7 +197,7 @@ header {
     text-orientation: upright;
     text-align: center;
     order: 2;
-    width: 8%;
+    width: 6%;
 }
 
 .menu-images {
@@ -236,7 +244,7 @@ header {
 }
 
 /* 中サイズ（PCだけど画面が小さいとき）も横書きにする */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .menu-container {
         flex-direction: column;
         align-items: center;
@@ -351,8 +359,8 @@ body.menu-page .container {
 
 .subtitle {
     font-size: 1.4em;
-    color: #c89407df;
-    font-weight: 700;
+    color: #e76c07;
+    font-weight: 1000;
 }
 
 @media screen and (max-width: 600px) {
@@ -529,13 +537,13 @@ body.menu-page .container {
     justify-content: center;
     align-items: flex-start;
     max-width: 1200px;
-    gap: 35px;
+    gap: 20px;
 }
 
 .information {
     border-radius: 20px;
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
 }
 
 .map iframe {
@@ -557,7 +565,7 @@ body.menu-page .container {
 .information p,
 .reserve p {
     font-size: 1em;
-    margin: 3px 0 1px 15px;
+    margin: 2px 0 1px 0px;
 }
 
 .information h2,
@@ -574,7 +582,7 @@ body.menu-page .container {
 }
 
 .information h3 {
-    margin: 5px 0 1px 15px;
+    margin: 5px 0 1px 0px;
     color: #060606;
     font-size: 1em;
 }
@@ -629,6 +637,7 @@ body.menu-page .container {
    ボタン（英語切替・TOP）
 =================================================== */
 .lang-button,
+.lang-button-top,
 .top-button {
     position: fixed;
     right: 20px;
@@ -647,6 +656,13 @@ body.menu-page .container {
     color: #fff;
 }
 
+.lang-button-top{
+    bottom: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.lang-button-top:hover,
 .lang-button:hover {
     background-color: #555;
 }
@@ -660,6 +676,10 @@ body.menu-page .container {
 .top-button:hover {
     background-color: #b89b73;
 }
+
+
+
+
 
 /* ===================================================
    レスポンシブ：スマホ用メニュー
