@@ -8,12 +8,12 @@ body {
     min-height: 100%;
     font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
     color: #060606;
-    background-image: url("img/background-washi.jpg");
+    background-image: url("background-washi.webp");
     position: relative;
 }
 
 /* 背景固定レイヤー（vh→dvhでモバイル対応） */
-body::before {
+/*body::before {
     content: "";
     position: fixed;
     inset: 0;
@@ -24,7 +24,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-}
+}*/
 
 @supports (height: 100svh) {
     body::before {
