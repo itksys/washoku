@@ -20,12 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # ← ここで index.html のプレースホルダを Secret で置換
+      # ← ここで全HTMLファイルのプレースホルダを Secret で置換
       - name: Inject Google Maps API key
-  run: |
-    find . -type f -name "*.html" -print0 | xargs -0 sed -i "s/MAPS_API_KEY_PLACEHOLDER/${{ secrets.MAPS_API_KEY }}/g"
+        run: |
+          find . -type f -name "*.html" -print0 | xargs -0 sed -i "s/MAPS_API_KEY_PLACEHOLDER/${{ secrets.MAPS_API_KEY }}/g"
 
-      # 公開する静的ファイルをアップロード（ルートに index.html がある想定）
+      # 公開する静的ファイルをアップロード（ルートに index.html, index-en.html がある想定）
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
