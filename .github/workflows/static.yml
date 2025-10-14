@@ -22,9 +22,8 @@ jobs:
 
       # ← ここで index.html のプレースホルダを Secret で置換
       - name: Inject Google Maps API key
-        run: |
-          sed -i "s/MAPS_API_KEY_PLACEHOLDER/${{ secrets.MAPS_API_KEY }}/g" index.html
-          test -f index.html
+  run: |
+    find . -type f -name "*.html" -print0 | xargs -0 sed -i "s/MAPS_API_KEY_PLACEHOLDER/${{ secrets.MAPS_API_KEY }}/g"
 
       # 公開する静的ファイルをアップロード（ルートに index.html がある想定）
       - name: Upload Pages artifact
