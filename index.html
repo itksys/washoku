@@ -9,19 +9,19 @@
     <link rel="preload" as="image" href="background-washi.webp">
 
     <!-- 通常のブラウザ用 -->
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
 
-<!-- iPhoneやiPadのホーム画面用 -->
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+    <!-- iPhoneやiPadのホーム画面用 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
 
-<!-- AndroidやPWA用のマニフェスト -->
-<link rel="manifest" href="site.webmanifest">
+    <!-- AndroidやPWA用のマニフェスト -->
+    <link rel="manifest" href="site.webmanifest">
 
 
     <!-- Google Maps API：APIキーは有効なものを使用してください -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=MAPS_API_KEY_PLACEHOLDER&callback=initMap"
-        async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=MAPS_API_KEY_PLACEHOLDER&callback=initMap" async
+        defer></script>
 
     <style>
         /* map用の最低限のスタイル */
@@ -72,53 +72,73 @@
                     <div class="menu-images">
 
                         <div class="menu-item">
-                            <img src="img/menu-sasimi.jpg" alt="刺身">
-                            <a href="menu.html#sasimi" class="menu-label">刺身</a>
+                            <a href="menu.html#sasimi">
+                                <img src="img/menu-sasimi.jpg" alt="刺身">
+                                <span class="menu-label">刺身</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-yakimono.jpg" alt="焼物">
-                            <a href="menu.html#yakimono" class="menu-label">焼物</a>
+                            <a href="menu.html#yakimono">
+                                <img src="img/menu-yakimono.jpg" alt="焼物">
+                                <span class="menu-label">焼物</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-kusimono.png" alt="串物">
-                            <a href="menu.html#kushimono" class="menu-label">串物</a>
+                            <a href="menu.html#kushimono">
+                                <img src="img/menu-kusimono.png" alt="串物">
+                                <span class="menu-label">串物</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-agemono.jpg" alt="揚物">
-                            <a href="menu.html#agemono" class="menu-label">揚げ物</a>
+                            <a href="menu.html#agemono">
+                                <img src="img/menu-agemono.jpg" alt="揚物">
+                                <span class="menu-label">揚げ物</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-nimono.jpg" alt="煮物">
-                            <a href="menu.html#simmered" class="menu-label">煮物</a>
+                            <a href="menu.html#simmered">
+                                <img src="img/menu-nimono.jpg" alt="煮物">
+                                <span class="menu-label">煮物</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-tokachigyu.png" alt="十勝牛">
-                            <a href="menu.html#tokachigyu" class="menu-label">十勝牛</a>
+                            <a href="menu.html#tokachigyu">
+                                <img src="img/menu-tokachigyu.png" alt="十勝牛">
+                                <span class="menu-label">十勝牛</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-sakezakana.jpg" alt="酢の物">
-                            <a href="menu.html#vinegared" class="menu-label">酢の物</a>
+                            <a href="menu.html#vinegared">
+                                <img src="img/menu-sakezakana.jpg" alt="酢の物">
+                                <span class="menu-label">酢の物</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-sarada.png" alt="サラダ">
-                            <a href="menu.html#salad" class="menu-label">サラダ</a>
+                            <a href="menu.html#salad">
+                                <img src="img/menu-sarada.png" alt="サラダ">
+                                <span class="menu-label">サラダ</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-sakezakana.jpg" alt="酒肴">
-                            <a href="menu.html#appetizers" class="menu-label">酒肴</a>
+                            <a href="menu.html#appetizers">
+                                <img src="img/menu-sakezakana.jpg" alt="酒肴">
+                                <span class="menu-label">酒肴</span>
+                            </a>
                         </div>
 
                         <div class="menu-item">
-                            <img src="img/menu-gohann.png" alt="ご飯もの">
-                            <a href="menu.html#rice" class="menu-label">ご飯もの</a>
+                            <a href="menu.html#rice">
+                                <img src="img/menu-gohann.png" alt="ご飯もの">
+                                <span class="menu-label">ご飯もの</span>
+                            </a>
                         </div>
 
                     </div>
@@ -183,7 +203,7 @@
             </div>
     </div>
 
-     <!-- 英語/日本語切替ボタン -->
+    <!-- 英語/日本語切替ボタン -->
     <a href="index-en.html" class="lang-button-top">English</a>
     </main>
 
@@ -197,30 +217,31 @@
             <a href="https://www.facebook.com/share/18t5vUqrrZ/?mibextid=wwXIfr" target="_blank" rel="noopener">
                 <img src="img/sns-fb.png" alt="Facebook">
             </a>
-            <a href="https://www.instagram.com/washoku_ya_takahashi?igsh=MW43cDJ0eThzZ28xOQ==" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/washoku_ya_takahashi?igsh=MW43cDJ0eThzZ28xOQ==" target="_blank"
+                rel="noopener">
                 <img src="img/sns-ig.png" alt="Instagram">
             </a>
         </div>
     </footer>
 
-    
-  <script>
-    function initMap() {
-      const location = { lat: 43.790881326438495, lng: 142.3299431221548 };
 
-    
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 14,
-        center: location
-      });
+    <script>
+        function initMap() {
+            const location = { lat: 43.790881326438495, lng: 142.3299431221548 };
 
-      const marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: "和食や高はし"
-      });
-    }
-  </script>
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: location
+            });
+
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "和食や高はし"
+            });
+        }
+    </script>
 </body>
 
 </html>
