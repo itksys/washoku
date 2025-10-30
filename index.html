@@ -22,6 +22,15 @@
     <!-- Google Maps API：APIキーは有効なものを使用してください -->
     <script src="https://maps.googleapis.com/maps/api/js?key=MAPS_API_KEY_PLACEHOLDER&callback=initMap" async
         defer></script>
+        
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRLXT0S712"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TRLXT0S712');
+    </script>
 
     <style>
         /* map用の最低限のスタイル */
@@ -115,7 +124,7 @@
 
                         <div class="menu-item">
                             <a href="menu.html#vinegared">
-                                <img src="img/menu-sakezakana.jpg" alt="酢の物">
+                                <img src="img/food-mozukusu.jpg" alt="酢の物">
                                 <span class="menu-label">酢の物</span>
                             </a>
                         </div>
