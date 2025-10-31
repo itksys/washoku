@@ -825,3 +825,67 @@ details.drink-accordion>summary::-webkit-details-marker {
 .sub-drink-accordion .drink-grid {
     margin-left: 10px;
 }
+
+/* animation css */
+@keyframes fadeInFromLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes fadeInFromBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(1em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadein {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.menu-item.animation {
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	transform: translateX(-20px);
+}
+.menu-item.in {
+	animation-name: fadeInFromLeft;
+}
+
+.information-img img.animation {
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.information-img img.in {
+	animation-name: fadein;
+}
+
+.menu-category img.animation {
+	animation-duration: .8s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.menu-category img.in {
+	animation-name: fadeInFromBottom;
+}
+/* animation css */
